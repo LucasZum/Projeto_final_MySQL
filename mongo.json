@@ -1,0 +1,73 @@
+{
+    "COMENTARIO":["Os exemplos abaixo demonstram as tabelas do banco de dados no modelo não relacional, ultilizando *referência manual* "],
+
+    "Usuario": [
+      {
+        "ID": 1,
+        "Nome": "João Silva",
+        "Email": "joao@email.com",
+        "Senha": "123456",
+        "Data_Cadastro": "2023-07-01"
+      }
+    ],
+    
+    "Canal": [
+      {
+        "ID": 1,
+        "Nome": "Canal do João",
+        "Descricao": "Vídeos variados sobre jogos",
+        "Data_Criacao": "2023-07-05",
+        "Usuario_ID": 1
+      }
+    ],
+  
+    "Video": [
+      {
+        "ID": 1,
+        "Titulo": "Title X",
+        "Descricao": "Desc X",
+        "Data_Upload": "2023-07-01",
+        "Visualizacoes": 1500,
+        "Duracao": "00:12:30",
+        "Canal_ID": 1
+      }
+    ],
+  
+    "Comentario": [
+      {
+        "ID": 1,
+        "Texto": "comentario...",
+        "Data_Postagem": "2023-07-01",
+        "Usuario_ID": 2,
+        "Video_ID": 1
+      }
+    ],
+  
+    "Assinante": [
+      {
+        "ID_Usuario": 1,
+        "ID_Canal": 2,
+        "Data_Inscricao": "2023-07-15"
+      }
+    ],
+
+
+    "COMENTARIO2":["Exemplo abaixo demostra a forma de fazer a tabela usuario utilizando *incorporação* "],
+
+
+    "Canal_Incorporacao": [{
+      "_id": 1,
+      "Nome": "Canal do João",
+      "Descricao": "Vídeos variados sobre jogos",
+      "Data_Criacao": "2023-07-05",
+      "Usuario": {
+        "_id": 1,
+        "Nome": "João Silva",
+        "Email": "joao@email.com",
+        "Senha": "123456",
+        "Data_Cadastro": "2023-07-01"
+      }
+    }]
+    
+  }
+  
